@@ -6,9 +6,9 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             CRUD
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -20,6 +20,7 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <Link className="btn btn-outline-light" to="/adduser">
             Add User
           </Link>

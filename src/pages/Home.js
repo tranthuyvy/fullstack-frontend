@@ -27,9 +27,9 @@ export default function Home() {
         <table className="table border shadow">
           <thead>
             <tr>
-              <th scope="col">#</th>
+              <th scope="col">S.N</th>
               <th scope="col">Name</th>
-              <th scope="col">User Name</th>
+              <th scope="col">Username</th>
               <th scope="col">Email</th>
               <th scope="col">Action</th>
             </tr>
@@ -44,19 +44,24 @@ export default function Home() {
                 <td>{user.username}</td>
                 <td>{user.email}</td>
                 <td>
-                  <button className="btn btn-outline-primary mx-2">View</button>
+                  <Link
+                    className="btn btn-outline-primary mx-2"
+                    to={`/viewuser/${user.id}`}
+                  >
+                    View
+                  </Link>
                   <Link
                     className="btn btn-outline-success mx-2"
                     to={`/edituser/${user.id}`}
                   >
                     Edit
                   </Link>
-                  <Link
+                  <button
                     className="btn btn-outline-danger mx-2"
                     onClick={() => deleteUser(user.id)}
                   >
                     Delete
-                  </Link>
+                  </button>
                 </td>
               </tr>
             ))}
